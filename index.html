@@ -18,6 +18,24 @@
         color: white;
         overflow-x: hidden;
       }
+      /* Aesthetic Background Engine */
+      .app-bg {
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=2029'); /* Fallback / Sample similar aesthetic */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      /* The Dark Glass Overlay to ensure text visibility */
+      .app-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: radial-gradient(circle at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.85) 100%);
+        backdrop-filter: blur(2px);
+      }
       .font-display {
         font-family: 'Oswald', sans-serif;
       }
@@ -111,6 +129,10 @@
 </script>
 </head>
   <body>
+    <!-- Background Layers -->
+    <div class="app-bg"></div>
+    <div class="app-overlay"></div>
+    
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
