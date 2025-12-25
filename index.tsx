@@ -242,14 +242,14 @@ const XG_MATRIX_LINK = "https://theanalyst.com/?s=XG&orderby=date%3ADESC&cat=23&
 // --- UI Components ---
 
 const IntelligenceFrame: React.FC<{ title?: string; icon?: string; children: React.ReactNode }> = ({ title, icon, children }) => (
-    <div className="relative p-[1px] rounded-[3.5rem] bg-gradient-to-br from-white/20 to-transparent overflow-hidden group/frame transition-all duration-700 shadow-2xl">
+    <div className="relative p-[1px] rounded-[2.2rem] md:rounded-[3.5rem] bg-gradient-to-br from-white/20 to-transparent overflow-hidden group/frame transition-all duration-700 shadow-2xl">
         {/* Glassmorphism Inner Layer */}
         <div className="absolute inset-0 bg-black/40 backdrop-blur-3xl"></div>
-        <div className="relative z-10 p-8 md:p-12 space-y-8 bg-black/30 rounded-[3.4rem] border border-white/5">
+        <div className="relative z-10 p-5 md:p-12 space-y-6 md:space-y-8 bg-black/30 rounded-[2.1rem] md:rounded-[3.4rem] border border-white/5">
             {title && (
-                <div className="flex items-center gap-4 mb-2">
-                    {icon && <i className={`fa-solid ${icon} text-[var(--primary-color)] text-xl drop-shadow-[0_0_8px_rgba(var(--primary-rgb),0.6)]`}></i>}
-                    <h3 className="text-xs font-black uppercase tracking-[0.4em] text-white/70">{title}</h3>
+                <div className="flex items-center gap-4 mb-1 md:mb-2">
+                    {icon && <i className={`fa-solid ${icon} text-[var(--primary-color)] text-lg md:text-xl drop-shadow-[0_0_8px_rgba(var(--primary-rgb),0.6)]`}></i>}
+                    <h3 className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-white/70">{title}</h3>
                 </div>
             )}
             {children}
@@ -287,38 +287,38 @@ const StreamPlayer: React.FC = () => {
     const handleWatch = () => window.open(HOT_MATCH_LINK, '_blank');
     return (
         <IntelligenceFrame>
-            <div className="relative w-full h-[40vh] md:h-[50vh] bg-black/40 backdrop-blur-md overflow-hidden group rounded-[2.5rem] border border-white/10 flex flex-col items-center justify-center">
+            <div className="relative w-full h-[35vh] md:h-[50vh] bg-black/40 backdrop-blur-md overflow-hidden group rounded-[1.8rem] md:rounded-[2.5rem] border border-white/10 flex flex-col items-center justify-center">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--primary-rgb),0.1),transparent_70%)]"></div>
                 
-                <div className="relative z-10 w-full max-w-2xl px-8 flex flex-col items-center text-center">
-                    <h1 className="text-white text-4xl md:text-6xl font-bold tracking-tight mb-3 drop-shadow-2xl">
+                <div className="relative z-10 w-full max-w-2xl px-6 md:px-8 flex flex-col items-center text-center">
+                    <h1 className="text-white text-3xl md:text-6xl font-bold tracking-tight mb-2 md:mb-3 drop-shadow-2xl">
                         Watch For Free
                     </h1>
-                    <p className="text-white/70 text-sm md:text-lg font-medium mb-10 max-w-md">
+                    <p className="text-white/70 text-xs md:text-lg font-medium mb-8 md:mb-10 max-w-md">
                         Global HD Broadcast Stream
                     </p>
 
                     <button 
                         onClick={handleWatch}
-                        className="relative w-full max-w-md py-6 md:py-8 bg-[var(--primary-color)] rounded-[2rem] flex items-center justify-center gap-5 group/btn active:scale-95 transition-all duration-300 shadow-[0_0_40px_rgba(var(--primary-rgb),0.3)] hover:shadow-[0_0_60px_rgba(var(--primary-rgb),0.5)] overflow-hidden"
+                        className="relative w-full max-w-sm md:max-w-md py-5 md:py-8 bg-[var(--primary-color)] rounded-[1.5rem] md:rounded-[2rem] flex items-center justify-center gap-4 md:gap-5 group/btn active:scale-95 transition-all duration-300 shadow-[0_0_40px_rgba(var(--primary-rgb),0.3)] hover:shadow-[0_0_60px_rgba(var(--primary-rgb),0.5)] overflow-hidden"
                     >
                         <div className="absolute inset-0 bg-white/20 opacity-0 group-hover/btn:opacity-100 transition-opacity"></div>
-                        <div className="relative z-10 flex items-center gap-4">
-                            <i className="fa-solid fa-play text-black text-2xl md:text-3xl"></i>
-                            <span className="text-black font-display font-black text-2xl md:text-3xl uppercase tracking-wider">
+                        <div className="relative z-10 flex items-center gap-3 md:gap-4">
+                            <i className="fa-solid fa-play text-black text-xl md:text-3xl"></i>
+                            <span className="text-black font-display font-black text-xl md:text-3xl uppercase tracking-wider">
                                 Stream Now
                             </span>
                         </div>
                     </button>
 
-                    <div className="mt-8 flex items-center gap-6 text-white/60 font-bold uppercase tracking-[0.2em] text-[10px]">
-                        <div className="flex items-center gap-3">
-                            <i className="fa-solid fa-earth-americas text-sm"></i>
+                    <div className="mt-6 md:mt-8 flex items-center gap-4 md:gap-6 text-white/60 font-bold uppercase tracking-[0.2em] text-[9px] md:text-[10px]">
+                        <div className="flex items-center gap-2 md:gap-3">
+                            <i className="fa-solid fa-earth-americas text-xs md:text-sm"></i>
                             All Regions
                         </div>
-                        <div className="w-1.5 h-1.5 rounded-full bg-white/20"></div>
-                        <div className="flex items-center gap-3">
-                            <i className="fa-solid fa-bolt text-sm"></i>
+                        <div className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-white/20"></div>
+                        <div className="flex items-center gap-2 md:gap-3">
+                            <i className="fa-solid fa-bolt text-xs md:text-sm"></i>
                             Low Latency
                         </div>
                     </div>
@@ -333,112 +333,112 @@ const StreamPlayer: React.FC = () => {
 const OptaTab: React.FC = () => {
     return (
         <div className="pb-32 pt-24 min-h-screen relative overflow-hidden animate-fade-in">
-            <div className="px-8 mb-10 relative z-10">
-                <div className="flex items-center gap-4 mb-4">
+            <div className="px-5 md:px-8 mb-8 md:mb-10 relative z-10">
+                <div className="flex items-center gap-4 mb-3 md:mb-4">
                     <div className="w-2 h-2 rounded-full bg-[var(--primary-color)] shadow-[0_0_12px_var(--primary-color)]"></div>
-                    <span className="text-xs font-mono text-[var(--primary-color)] uppercase tracking-widest font-black drop-shadow-sm">Data Intelligence Engine</span>
+                    <span className="text-[10px] md:text-xs font-mono text-[var(--primary-color)] uppercase tracking-widest font-black drop-shadow-sm">Data Intelligence Engine</span>
                 </div>
-                <h2 className="text-6xl font-display font-black text-white uppercase tracking-tighter leading-none drop-shadow-2xl">
+                <h2 className="text-4xl md:text-6xl font-display font-black text-white uppercase tracking-tighter leading-none drop-shadow-2xl">
                     OPTA <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-white">VISION</span>
                 </h2>
             </div>
 
-            <div className="px-6 space-y-8 relative z-10">
+            <div className="px-4 md:px-6 space-y-6 md:space-y-8 relative z-10">
                 <IntelligenceFrame title="Performance Model" icon="fa-microchip">
                     <div 
                         onClick={() => window.open(POWER_RANKINGS_LINK, "_blank")}
-                        className="bg-black/40 backdrop-blur-md border border-white/10 rounded-[3.2rem] p-1 shadow-3xl relative overflow-hidden group/terminal cursor-pointer hover:border-[var(--primary-color)]/40 transition-all duration-500"
+                        className="bg-black/40 backdrop-blur-md border border-white/10 rounded-[2.2rem] md:rounded-[3.2rem] p-0.5 md:p-1 shadow-3xl relative overflow-hidden group/terminal cursor-pointer hover:border-[var(--primary-color)]/40 transition-all duration-500"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-color)]/10 via-transparent to-transparent opacity-0 group-hover/terminal:opacity-100 transition-opacity"></div>
-                        <div className="relative z-10 bg-black/60 rounded-[3.1rem] p-10 border border-white/5">
-                            <div className="flex items-center justify-between mb-12">
-                                <div className="flex items-center gap-5">
-                                    <div className="w-14 h-14 rounded-2xl bg-[var(--primary-color)]/20 flex items-center justify-center border border-[var(--primary-color)]/30 shadow-[0_0_20px_rgba(var(--primary-rgb),0.2)]">
-                                        <i className="fa-solid fa-ranking-star text-[var(--primary-color)] text-2xl"></i>
+                        <div className="relative z-10 bg-black/60 rounded-[2.1rem] md:rounded-[3.1rem] p-6 md:p-10 border border-white/5">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 md:mb-12">
+                                <div className="flex items-center gap-4 md:gap-5">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[var(--primary-color)]/20 flex items-center justify-center border border-[var(--primary-color)]/30 shadow-[0_0_20px_rgba(var(--primary-rgb),0.2)]">
+                                        <i className="fa-solid fa-ranking-star text-[var(--primary-color)] text-xl md:text-2xl"></i>
                                     </div>
                                     <div>
-                                        <h3 className="text-3xl md:text-4xl font-display font-bold uppercase tracking-tight leading-none mb-1 text-white">Power Rankings</h3>
-                                        <p className="text-white/50 text-[10px] font-mono uppercase tracking-widest font-bold">Real-Time Global Model</p>
+                                        <h3 className="text-2xl md:text-4xl font-display font-bold uppercase tracking-tight leading-none mb-1 text-white">Power Rankings</h3>
+                                        <p className="text-white/50 text-[9px] md:text-[10px] font-mono uppercase tracking-widest font-bold">Real-Time Global Model</p>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-3 bg-white/10 px-4 py-2 rounded-full border border-white/20 group-hover/terminal:bg-[var(--primary-color)]/20 transition-all">
+                                <div className="self-start md:self-center flex items-center gap-3 bg-white/10 px-4 py-2 rounded-full border border-white/20 group-hover/terminal:bg-[var(--primary-color)]/20 transition-all">
                                     <span className="w-2 h-2 rounded-full bg-[var(--primary-color)] animate-pulse"></span>
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-white/80 group-hover/terminal:text-white">Live Index</span>
+                                    <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/80 group-hover/terminal:text-white">Live Index</span>
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                                <div className="bg-black/60 rounded-3xl p-6 border border-white/10 hover:bg-black/80 transition-colors shadow-inner">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Win Probability</span>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+                                <div className="bg-black/60 rounded-2xl md:rounded-3xl p-5 md:p-6 border border-white/10 hover:bg-black/80 transition-colors shadow-inner">
+                                    <div className="flex items-center justify-between mb-3 md:mb-4">
+                                        <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/40">Win Probability</span>
                                         <i className="fa-solid fa-chart-pie text-purple-400"></i>
                                     </div>
-                                    <div className="flex items-end gap-3 mb-2">
-                                        <span className="text-4xl font-display font-bold text-white">92.4%</span>
-                                        <span className="text-[var(--primary-color)] text-xs font-mono mb-1 flex items-center gap-1 font-black"><i className="fa-solid fa-caret-up"></i> 1.2%</span>
+                                    <div className="flex items-end gap-2 md:gap-3 mb-2">
+                                        <span className="text-3xl md:text-4xl font-display font-bold text-white">92.4%</span>
+                                        <span className="text-[var(--primary-color)] text-[10px] md:text-xs font-mono mb-1 flex items-center gap-1 font-black"><i className="fa-solid fa-caret-up"></i> 1.2%</span>
                                     </div>
-                                    <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                    <div className="w-full h-1 md:h-1.5 bg-white/5 rounded-full overflow-hidden">
                                         <div className="h-full bg-gradient-to-r from-purple-500 to-indigo-500 w-[92%] rounded-full shadow-[0_0_10px_rgba(168,85,247,0.4)]"></div>
                                     </div>
                                 </div>
 
-                                <div className="bg-black/60 rounded-3xl p-6 border border-white/10 hover:bg-black/80 transition-colors shadow-inner">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Attack Efficiency</span>
+                                <div className="bg-black/60 rounded-2xl md:rounded-3xl p-5 md:p-6 border border-white/10 hover:bg-black/80 transition-colors shadow-inner">
+                                    <div className="flex items-center justify-between mb-3 md:mb-4">
+                                        <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/40">Attack Efficiency</span>
                                         <i className="fa-solid fa-fire text-orange-500"></i>
                                     </div>
-                                    <div className="flex items-end gap-3 mb-2">
-                                        <span className="text-4xl font-display font-bold text-white">8.1</span>
-                                        <span className="text-white/40 text-[10px] font-mono mb-1 uppercase tracking-widest">xG/Match</span>
+                                    <div className="flex items-end gap-2 md:gap-3 mb-2">
+                                        <span className="text-3xl md:text-4xl font-display font-bold text-white">8.1</span>
+                                        <span className="text-white/40 text-[9px] md:text-[10px] font-mono mb-1 uppercase tracking-widest">xG/Match</span>
                                     </div>
-                                    <div className="flex gap-1 h-3 items-end">
+                                    <div className="flex gap-1 h-2 md:h-3 items-end">
                                         {[40, 70, 55, 90, 65, 80, 45].map((h, i) => (
                                             <div key={i} className={`flex-1 rounded-sm ${i === 3 ? 'bg-[var(--primary-color)] shadow-[0_0_12px_var(--primary-color)]' : 'bg-white/10'}`} style={{ height: `${h}%` }}></div>
                                         ))}
                                     </div>
                                 </div>
 
-                                <div className="bg-black/60 rounded-3xl p-6 border border-white/10 hover:bg-black/80 transition-colors shadow-inner">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-white/40">Defensive Rating</span>
+                                <div className="bg-black/60 rounded-2xl md:rounded-3xl p-5 md:p-6 border border-white/10 hover:bg-black/80 transition-colors shadow-inner">
+                                    <div className="flex items-center justify-between mb-3 md:mb-4">
+                                        <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/40">Defensive Rating</span>
                                         <i className="fa-solid fa-shield-halved text-cyan-400"></i>
                                     </div>
-                                    <div className="flex items-end gap-3 mb-2">
-                                        <span className="text-4xl font-display font-bold text-white">A+</span>
-                                        <span className="text-cyan-400 text-[10px] font-mono mb-1 uppercase tracking-widest font-black">Top 1%</span>
+                                    <div className="flex items-end gap-2 md:gap-3 mb-2">
+                                        <span className="text-3xl md:text-4xl font-display font-bold text-white">A+</span>
+                                        <span className="text-cyan-400 text-[9px] md:text-[10px] font-mono mb-1 uppercase tracking-widest font-black">Top 1%</span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <div className="flex -space-x-2">
-                                            {[1, 2, 3].map(i => <div key={i} className="w-6 h-6 rounded-full border-2 border-black bg-white/20"></div>)}
+                                        <div className="flex -space-x-1.5 md:-space-x-2">
+                                            {[1, 2, 3].map(i => <div key={i} className="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black bg-white/20"></div>)}
                                         </div>
-                                        <span className="text-[9px] text-white/50 font-black uppercase tracking-widest italic">Elite Category</span>
+                                        <span className="text-[8px] md:text-[9px] text-white/50 font-black uppercase tracking-widest italic">Elite Category</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="bg-[var(--primary-color)] text-black rounded-2xl py-6 flex items-center justify-center gap-4 font-display font-black text-2xl uppercase tracking-widest group-hover/terminal:scale-[1.02] transition-transform duration-500 shadow-[0_15px_30px_rgba(var(--primary-rgb),0.3)]">
-                                <i className="fa-solid fa-up-right-from-square text-xl"></i>
-                                Explore Full Rankings
+                            <div className="bg-[var(--primary-color)] text-black rounded-xl md:rounded-2xl py-4 md:py-6 flex items-center justify-center gap-3 md:gap-4 font-display font-black text-xl md:text-2xl uppercase tracking-widest group-hover/terminal:scale-[1.01] transition-transform duration-500 shadow-[0_15px_30px_rgba(var(--primary-rgb),0.3)]">
+                                <i className="fa-solid fa-up-right-from-square text-lg md:text-xl"></i>
+                                Explore Rankings
                             </div>
                         </div>
                     </div>
                 </IntelligenceFrame>
 
-                <div className="grid grid-cols-2 gap-6 pb-12">
+                <div className="grid grid-cols-2 gap-4 md:gap-6 pb-12">
                     <div 
                         onClick={() => window.open(OPTA_ANALYST_LINK, "_blank")}
-                        className="bg-black/60 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-10 hover:bg-black/80 transition-all cursor-pointer group shadow-2xl relative overflow-hidden"
+                        className="bg-black/60 backdrop-blur-xl border border-white/10 rounded-[1.8rem] md:rounded-[2.5rem] p-6 md:p-10 hover:bg-black/80 transition-all cursor-pointer group shadow-2xl relative overflow-hidden"
                     >
-                        <i className="fa-solid fa-fire text-orange-500 text-4xl mb-8 group-hover:scale-125 transition-transform duration-500 block drop-shadow-[0_0_10px_rgba(249,115,22,0.5)]"></i>
-                        <h4 className="font-display font-bold text-3xl uppercase mb-2 tracking-tight text-white">Heatmaps</h4>
+                        <i className="fa-solid fa-fire text-orange-500 text-3xl md:text-4xl mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500 block drop-shadow-[0_0_10px_rgba(249,115,22,0.5)]"></i>
+                        <h4 className="font-display font-bold text-2xl md:text-3xl uppercase mb-1 tracking-tight text-white">Heatmaps</h4>
                     </div>
 
                     <div 
                         onClick={() => window.open(XG_MATRIX_LINK, "_blank")}
-                        className="bg-black/60 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-10 hover:bg-black/80 transition-all cursor-pointer group shadow-2xl relative overflow-hidden"
+                        className="bg-black/60 backdrop-blur-xl border border-white/10 rounded-[1.8rem] md:rounded-[2.5rem] p-6 md:p-10 hover:bg-black/80 transition-all cursor-pointer group shadow-2xl relative overflow-hidden"
                     >
-                        <i className="fa-solid fa-bullseye text-cyan-400 text-4xl mb-8 group-hover:scale-125 transition-transform duration-500 block drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]"></i>
-                        <h4 className="font-display font-bold text-3xl uppercase mb-2 tracking-tight text-white">xG Matrix</h4>
+                        <i className="fa-solid fa-bullseye text-cyan-400 text-3xl md:text-4xl mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500 block drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]"></i>
+                        <h4 className="font-display font-bold text-2xl md:text-3xl uppercase mb-1 tracking-tight text-white">xG Matrix</h4>
                     </div>
                 </div>
             </div>
@@ -448,15 +448,15 @@ const OptaTab: React.FC = () => {
 
 const NewsTab: React.FC = () => {
     return (
-        <div className="p-8 pt-28 pb-32 min-h-screen relative animate-fade-in overflow-hidden">
-            <div className="relative z-10 space-y-12">
+        <div className="p-5 md:p-8 pt-28 pb-32 min-h-screen relative animate-fade-in overflow-hidden">
+            <div className="relative z-10 space-y-8 md:space-y-12">
                 <div className="flex items-center justify-between">
-                    <div className="space-y-2">
+                    <div className="space-y-1 md:space-y-2">
                         <div className="flex items-center gap-3">
-                            <div className="w-2 h-6 bg-[var(--primary-color)] rounded-full shadow-[0_0_8px_var(--primary-color)]"></div>
-                            <span className="text-xs font-mono text-[var(--primary-color)] uppercase tracking-[0.4em] font-black drop-shadow-sm">Intelligence Terminal</span>
+                            <div className="w-1.5 h-5 md:w-2 md:h-6 bg-[var(--primary-color)] rounded-full shadow-[0_0_8px_var(--primary-color)]"></div>
+                            <span className="text-[10px] md:text-xs font-mono text-[var(--primary-color)] uppercase tracking-[0.4em] font-black drop-shadow-sm">Intelligence Terminal</span>
                         </div>
-                        <h2 className="text-6xl font-display font-bold text-white uppercase tracking-tighter leading-none drop-shadow-2xl">
+                        <h2 className="text-4xl md:text-6xl font-display font-bold text-white uppercase tracking-tighter leading-none drop-shadow-2xl">
                             GLOBAL <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">REPORTS</span>
                         </h2>
                     </div>
@@ -465,29 +465,29 @@ const NewsTab: React.FC = () => {
                 <IntelligenceFrame title="Hub Network" icon="fa-satellite-dish">
                     <div 
                         onClick={() => window.open(GOOGLE_NEWS_TOPIC_LINK, "_blank")}
-                        className="group/news-hub relative w-full aspect-[16/10] md:aspect-[21/9] bg-black/40 backdrop-blur-2xl border border-white/10 rounded-[3rem] overflow-hidden cursor-pointer hover:border-[var(--primary-color)]/30 transition-all duration-700 shadow-3xl"
+                        className="group/news-hub relative w-full aspect-[4/3] md:aspect-[21/9] bg-black/40 backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[3rem] overflow-hidden cursor-pointer hover:border-[var(--primary-color)]/30 transition-all duration-700 shadow-3xl"
                     >
                         <div className="absolute inset-0 opacity-10 pointer-events-none">
                             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
                         </div>
 
-                        <div className="absolute inset-0 p-12 flex flex-col justify-between">
+                        <div className="absolute inset-0 p-6 md:p-12 flex flex-col justify-between">
                             <div className="flex justify-between items-start">
-                                <div className="flex items-center gap-4 bg-black/60 backdrop-blur-md px-6 py-3 rounded-2xl border border-white/20">
-                                    <i className="fa-solid fa-satellite-dish text-[var(--primary-color)] animate-pulse shadow-[0_0_10px_rgba(var(--primary-rgb),0.5)]"></i>
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-white/90">Syncing Global Datasets</span>
+                                <div className="flex items-center gap-3 md:gap-4 bg-black/60 backdrop-blur-md px-4 md:px-6 py-2 md:py-3 rounded-xl md:rounded-2xl border border-white/20">
+                                    <i className="fa-solid fa-satellite-dish text-[var(--primary-color)] animate-pulse shadow-[0_0_10px_rgba(var(--primary-rgb),0.5)] text-sm md:text-base"></i>
+                                    <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/90">Syncing Data</span>
                                 </div>
-                                <div className="w-16 h-16 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform shadow-2xl">
-                                    <i className="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white text-black flex items-center justify-center hover:scale-110 transition-transform shadow-2xl">
+                                    <i className="fa-solid fa-arrow-up-right-from-square text-lg md:text-xl"></i>
                                 </div>
                             </div>
 
-                            <div className="max-w-2xl">
-                                <h3 className="text-4xl md:text-6xl font-display font-black text-white uppercase leading-none tracking-tighter mb-4 group-hover/news-hub:translate-x-4 transition-transform duration-500 drop-shadow-2xl">
-                                    Global Intelligence <br/>
+                            <div className="max-w-xl">
+                                <h3 className="text-3xl md:text-6xl font-display font-black text-white uppercase leading-none tracking-tighter mb-3 md:mb-4 group-hover/news-hub:translate-x-2 md:group-hover/news-hub:translate-x-4 transition-transform duration-500 drop-shadow-2xl">
+                                    Intelligence <br/>
                                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-emerald-400">Hub Terminal</span>
                                 </h3>
-                                <p className="text-lg text-white/70 font-medium leading-relaxed mb-6 drop-shadow-md">
+                                <p className="text-sm md:text-lg text-white/70 font-medium leading-relaxed drop-shadow-md hidden sm:block">
                                     Real-time aggregation of official football reports from across the planet.
                                 </p>
                             </div>
@@ -495,23 +495,23 @@ const NewsTab: React.FC = () => {
                     </div>
                 </IntelligenceFrame>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pb-12">
-                    <div onClick={() => window.open(GOOGLE_NEWS_TOPIC_LINK, "_blank")} className="bg-black/60 backdrop-blur-xl border border-white/10 p-10 rounded-[3rem] hover:bg-black/80 transition-all cursor-pointer group flex items-center justify-between shadow-2xl">
-                        <div className="space-y-4">
-                            <h4 className="text-2xl font-display font-bold uppercase tracking-tight text-white group-hover:text-[var(--primary-color)] transition-colors">Transfer Radar</h4>
-                            <p className="text-sm text-white/50 font-medium">Verified move tracking and valuation shifts.</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pb-12">
+                    <div onClick={() => window.open(GOOGLE_NEWS_TOPIC_LINK, "_blank")} className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] hover:bg-black/80 transition-all cursor-pointer group flex items-center justify-between shadow-2xl">
+                        <div className="space-y-2 md:space-y-4">
+                            <h4 className="text-xl md:text-2xl font-display font-bold uppercase tracking-tight text-white group-hover:text-[var(--primary-color)] transition-colors">Transfer Radar</h4>
+                            <p className="text-[11px] md:text-sm text-white/50 font-medium">Verified move tracking analytics.</p>
                         </div>
-                        <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[var(--primary-color)] group-hover:text-black transition-all shadow-lg">
-                            <i className="fa-solid fa-money-bill-transfer text-xl"></i>
+                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[var(--primary-color)] group-hover:text-black transition-all shadow-lg">
+                            <i className="fa-solid fa-money-bill-transfer text-lg md:text-xl"></i>
                         </div>
                     </div>
-                    <div onClick={() => window.open(GOOGLE_NEWS_TOPIC_LINK, "_blank")} className="bg-black/60 backdrop-blur-xl border border-white/10 p-10 rounded-[3rem] hover:bg-black/80 transition-all cursor-pointer group flex items-center justify-between shadow-2xl">
-                        <div className="space-y-4">
-                            <h4 className="text-2xl font-display font-bold uppercase tracking-tight text-white group-hover:text-blue-400 transition-colors">Medical Bulletin</h4>
-                            <p className="text-sm text-white/50 font-medium">Real-time injury and recovery analytics.</p>
+                    <div onClick={() => window.open(GOOGLE_NEWS_TOPIC_LINK, "_blank")} className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] hover:bg-black/80 transition-all cursor-pointer group flex items-center justify-between shadow-2xl">
+                        <div className="space-y-2 md:space-y-4">
+                            <h4 className="text-xl md:text-2xl font-display font-bold uppercase tracking-tight text-white group-hover:text-blue-400 transition-colors">Medical Bulletin</h4>
+                            <p className="text-[11px] md:text-sm text-white/50 font-medium">Real-time recovery data flow.</p>
                         </div>
-                        <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-black transition-all shadow-lg">
-                            <i className="fa-solid fa-briefcase-medical text-xl"></i>
+                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-black transition-all shadow-lg">
+                            <i className="fa-solid fa-briefcase-medical text-lg md:text-xl"></i>
                         </div>
                     </div>
                 </div>
@@ -529,25 +529,25 @@ const PremiumModal: React.FC<{
 }> = ({ isOpen, onClose, title, icon, content }) => {
     if (!isOpen) return null;
     return (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 animate-fade-in">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-5 md:p-6 animate-fade-in">
             <div className="absolute inset-0 bg-black/80 backdrop-blur-3xl" onClick={onClose}></div>
-            <div className="relative w-full max-w-2xl bg-black/80 border border-white/20 rounded-[3rem] shadow-[0_0_100px_rgba(0,0,0,0.8)] overflow-hidden animate-slide-up">
-                <div className="p-12">
-                    <div className="flex items-center justify-between mb-10">
-                        <div className="flex items-center gap-6">
-                            <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center shadow-lg">
-                                <i className={`fa-solid ${icon} text-2xl text-[var(--primary-color)]`}></i>
+            <div className="relative w-full max-w-2xl bg-black/80 border border-white/20 rounded-[2.5rem] md:rounded-[3rem] shadow-[0_0_100px_rgba(0,0,0,0.8)] overflow-hidden animate-slide-up">
+                <div className="p-8 md:p-12">
+                    <div className="flex items-center justify-between mb-8 md:mb-10">
+                        <div className="flex items-center gap-4 md:gap-6">
+                            <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center shadow-lg">
+                                <i className={`fa-solid ${icon} text-xl md:text-2xl text-[var(--primary-color)]`}></i>
                             </div>
-                            <h2 className="text-4xl font-display font-black uppercase tracking-tighter text-white">{title}</h2>
+                            <h2 className="text-2xl md:text-4xl font-display font-black uppercase tracking-tighter text-white">{title}</h2>
                         </div>
-                        <button onClick={onClose} className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                        <button onClick={onClose} className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
                             <i className="fa-solid fa-xmark text-white"></i>
                         </button>
                     </div>
-                    <div className="space-y-8 max-h-[60vh] overflow-y-auto no-scrollbar pr-2">
+                    <div className="space-y-6 md:space-y-8 max-h-[50vh] md:max-h-[60vh] overflow-y-auto no-scrollbar pr-1 md:pr-2">
                         {content}
                     </div>
-                    <button onClick={onClose} className="w-full mt-10 py-5 bg-[var(--primary-color)] text-black rounded-2xl font-display font-black text-lg uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all shadow-xl">
+                    <button onClick={onClose} className="w-full mt-8 md:mt-10 py-4 md:py-5 bg-[var(--primary-color)] text-black rounded-xl md:rounded-2xl font-display font-black text-lg uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all shadow-xl">
                         Dismiss
                     </button>
                 </div>
@@ -617,27 +617,27 @@ const SettingsTab: React.FC = () => {
     };
 
     return (
-        <div className="p-8 pt-28 pb-40 min-h-screen relative animate-fade-in overflow-x-hidden">
-            <div className="max-w-4xl mx-auto space-y-16 relative z-10">
-                <div className="flex items-center gap-6">
-                    <div className="w-16 h-16 rounded-2xl bg-[var(--primary-color)]/10 border border-[var(--primary-color)]/30 flex items-center justify-center shadow-[0_0_30px_rgba(var(--primary-rgb),0.2)] backdrop-blur-xl">
-                        <i className="fa-solid fa-sliders text-[var(--primary-color)] text-3xl drop-shadow-md"></i>
+        <div className="px-4 md:px-8 pt-28 pb-40 min-h-screen relative animate-fade-in overflow-x-hidden">
+            <div className="max-w-4xl mx-auto space-y-10 md:space-y-16 relative z-10">
+                <div className="flex items-center gap-5 md:gap-6">
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-[var(--primary-color)]/10 border border-[var(--primary-color)]/30 flex items-center justify-center shadow-[0_0_30px_rgba(var(--primary-rgb),0.2)] backdrop-blur-xl">
+                        <i className="fa-solid fa-sliders text-[var(--primary-color)] text-2xl md:text-3xl drop-shadow-md"></i>
                     </div>
                     <div>
-                        <h2 className="text-5xl font-display font-black text-white uppercase tracking-tighter leading-none mb-1 drop-shadow-2xl">Settings</h2>
-                        <p className="text-xs font-mono text-white/50 uppercase tracking-[0.4em] font-black drop-shadow-sm">Configure Your Experience</p>
+                        <h2 className="text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tighter leading-none mb-1 drop-shadow-2xl">Settings</h2>
+                        <p className="text-[10px] md:text-xs font-mono text-white/50 uppercase tracking-[0.4em] font-black drop-shadow-sm">Configure Experience</p>
                     </div>
                 </div>
 
-                <div className="space-y-12">
+                <div className="space-y-10 md:space-y-12">
                     <IntelligenceFrame title="Subscription & Access" icon="fa-crown">
-                        <div className="group/sync relative bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl border border-white/10 p-1 rounded-[3.2rem] shadow-3xl">
-                            <div className="bg-black/40 rounded-[3.1rem] p-10 flex flex-col md:flex-row items-center justify-between gap-10">
-                                <div className="space-y-4 text-center md:text-left">
-                                    <h3 className="text-3xl font-display font-bold uppercase tracking-tight text-white drop-shadow-md">Sync Your Tactics</h3>
-                                    <p className="text-white/60 font-bold max-w-sm">Unlock premium scouting preferences across all tactical units.</p>
+                        <div className="group/sync relative bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl border border-white/10 p-1 rounded-[2rem] md:rounded-[3.2rem] shadow-3xl">
+                            <div className="bg-black/40 rounded-[1.9rem] md:rounded-[3.1rem] p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
+                                <div className="space-y-3 text-center md:text-left">
+                                    <h3 className="text-2xl md:text-3xl font-display font-bold uppercase tracking-tight text-white drop-shadow-md">Sync Your Tactics</h3>
+                                    <p className="text-white/60 text-sm md:text-base font-bold max-w-sm">Unlock premium scouting preferences across tactical units.</p>
                                 </div>
-                                <button className="bg-white text-black px-12 py-5 rounded-2xl font-display font-black text-xl uppercase tracking-widest hover:bg-[var(--primary-color)] transition-all shadow-2xl active:scale-95">
+                                <button className="w-full md:w-auto bg-white text-black px-10 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl font-display font-black text-lg md:text-xl uppercase tracking-widest hover:bg-[var(--primary-color)] transition-all shadow-2xl active:scale-95">
                                     Sign In Now
                                 </button>
                             </div>
@@ -645,12 +645,12 @@ const SettingsTab: React.FC = () => {
                     </IntelligenceFrame>
 
                     <IntelligenceFrame title="System Preferences" icon="fa-gears">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-8 rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
-                                <h3 className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] mb-6 flex items-center gap-2">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                            <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-[1.8rem] md:rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+                                <h3 className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] mb-4 md:mb-6 flex items-center gap-2">
                                     <i className="fa-solid fa-palette text-[var(--primary-color)]"></i> Theme Accent
                                 </h3>
-                                <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-3 md:gap-4">
                                     {THEMES.map((theme) => (
                                         <button
                                             key={theme.name}
@@ -661,7 +661,7 @@ const SettingsTab: React.FC = () => {
                                                 localStorage.setItem('themeColor', theme.color);
                                                 localStorage.setItem('themeRgb', theme.rgb);
                                             }}
-                                            className="w-8 h-8 rounded-full border border-white/10 hover:scale-110 transition-all hover:border-white focus:outline-none relative shadow-xl"
+                                            className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/10 hover:scale-110 transition-all hover:border-white focus:outline-none relative shadow-xl"
                                             style={{ backgroundColor: theme.color }}
                                         >
                                             <div className="absolute inset-0 bg-white/20 rounded-full opacity-0 hover:opacity-100 transition-opacity"></div>
@@ -670,8 +670,8 @@ const SettingsTab: React.FC = () => {
                                 </div>
                             </div>
 
-                            <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-8 rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
-                                <h3 className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] mb-6 flex items-center gap-3">
+                            <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-[1.8rem] md:rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+                                <h3 className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] mb-4 md:mb-6 flex items-center gap-3">
                                     <i className="fa-solid fa-language text-blue-400"></i> Global Locale
                                     {isSaving && <i className="fa-solid fa-circle-notch fa-spin text-xs ml-auto text-[var(--primary-color)]"></i>}
                                 </h3>
@@ -681,18 +681,14 @@ const SettingsTab: React.FC = () => {
                                             key={lang.code}
                                             onClick={() => handleLanguageSelect(lang.code)}
                                             disabled={isSaving}
-                                            className={`px-6 py-4 rounded-2xl border text-[11px] font-black uppercase tracking-[0.2em] transition-all flex items-center justify-between group/lang ${selectedLang === lang.code ? 'bg-white text-black border-white shadow-2xl' : 'bg-white/5 text-white/60 border-white/10 hover:border-white/30 hover:bg-white/10'}`}
+                                            className={`px-5 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl border text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] transition-all flex items-center justify-between group/lang ${selectedLang === lang.code ? 'bg-white text-black border-white shadow-2xl' : 'bg-white/5 text-white/60 border-white/10 hover:border-white/30 hover:bg-white/10'}`}
                                         >
                                             <div className="flex flex-col items-start leading-tight">
                                                 <span>{lang.name}</span>
-                                                <span className={`text-[8px] font-mono mt-0.5 ${selectedLang === lang.code ? 'text-black/50' : 'text-white/30'}`}>{lang.region}</span>
+                                                <span className={`text-[7px] md:text-[8px] font-mono mt-0.5 ${selectedLang === lang.code ? 'text-black/50' : 'text-white/30'}`}>{lang.region}</span>
                                             </div>
                                             <div className="flex items-center gap-3">
-                                                {selectedLang === lang.code ? (
-                                                    <i className="fa-solid fa-check-double text-blue-500 animate-fade-in"></i>
-                                                ) : (
-                                                    <i className="fa-solid fa-chevron-right text-[8px] opacity-0 group-hover/lang:opacity-100 transition-opacity"></i>
-                                                )}
+                                                {selectedLang === lang.code && <i className="fa-solid fa-check-double text-blue-500 animate-fade-in text-xs"></i>}
                                             </div>
                                         </button>
                                     ))}
@@ -702,12 +698,12 @@ const SettingsTab: React.FC = () => {
                     </IntelligenceFrame>
 
                     <IntelligenceFrame title="Terminal Utilities" icon="fa-bolt">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                             {[
-                                { id: 'share', icon: 'fa-share-nodes', label: 'Share App', color: 'text-emerald-400', url: 'https://www.tiktok.com/@menkirteamir?_r=1&_t=ZM-92PcIl7bzLQ' },
-                                { id: 'updates', icon: 'fa-rocket', label: 'Follow Updates', color: 'text-purple-400', url: 'https://www.instagram.com/menkirwolde?igsh=MTY4Nmh1N2FtMHVrNg==' },
-                                { id: 'tips', icon: 'fa-lightbulb', label: 'Tips & Tricks', color: 'text-yellow-400', action: () => setActiveModal('tips') },
-                                { id: 'privacy', icon: 'fa-user-lock', label: 'Privacy Policy', color: 'text-red-400', action: () => setActiveModal('privacy') },
+                                { id: 'share', icon: 'fa-share-nodes', label: 'Share', color: 'text-emerald-400', url: 'https://www.tiktok.com/@menkirteamir?_r=1&_t=ZM-92PcIl7bzLQ' },
+                                { id: 'updates', icon: 'fa-rocket', label: 'Updates', color: 'text-purple-400', url: 'https://www.instagram.com/menkirwolde?igsh=MTY4Nmh1N2FtMHVrNg==' },
+                                { id: 'tips', icon: 'fa-lightbulb', label: 'Tips', color: 'text-yellow-400', action: () => setActiveModal('tips') },
+                                { id: 'privacy', icon: 'fa-user-lock', label: 'Privacy', color: 'text-red-400', action: () => setActiveModal('privacy') },
                             ].map(item => (
                                 <button 
                                     key={item.id} 
@@ -718,32 +714,32 @@ const SettingsTab: React.FC = () => {
                                             window.open(item.url, '_blank');
                                         }
                                     }}
-                                    className="bg-black/40 backdrop-blur-xl border border-white/10 p-6 rounded-3xl hover:bg-black/60 transition-all group flex flex-col items-center gap-3 shadow-lg"
+                                    className="bg-black/40 backdrop-blur-xl border border-white/10 p-5 md:p-6 rounded-[1.5rem] md:rounded-3xl hover:bg-black/60 transition-all group flex flex-col items-center gap-2 md:gap-3 shadow-lg"
                                 >
-                                    <i className={`fa-solid ${item.icon} ${item.color} text-2xl group-hover:scale-110 transition-transform drop-shadow-md`}></i>
-                                    <span className="text-[9px] font-black uppercase tracking-widest text-white/70">{item.label}</span>
+                                    <i className={`fa-solid ${item.icon} ${item.color} text-xl md:text-2xl group-hover:scale-110 transition-transform drop-shadow-md`}></i>
+                                    <span className="text-[8px] md:text-[9px] font-black uppercase tracking-widest text-white/70">{item.label}</span>
                                 </button>
                             ))}
                         </div>
                     </IntelligenceFrame>
 
-                    <div className="bg-black/60 backdrop-blur-2xl border border-white/10 p-8 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-6 shadow-3xl">
-                        <div className="flex items-center gap-4">
-                            <i className="fa-solid fa-circle-info text-white/40 text-xl"></i>
-                            <span className="text-sm font-bold text-white/60">Need expert assistance or want to review our legal framework?</span>
+                    <div className="bg-black/60 backdrop-blur-2xl border border-white/10 p-6 md:p-8 rounded-[1.8rem] md:rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-6 shadow-3xl">
+                        <div className="flex items-center gap-4 text-center md:text-left">
+                            <i className="fa-solid fa-circle-info text-white/40 text-xl hidden sm:block"></i>
+                            <span className="text-xs md:text-sm font-bold text-white/60">Professional tactical support and verified legal framework access.</span>
                         </div>
-                        <button className="text-[10px] font-black uppercase tracking-[0.2em] px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all text-white">
-                            Support & Legal Hub
+                        <button className="w-full md:w-auto text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all text-white">
+                            Support Hub
                         </button>
                     </div>
 
-                    <div className="pt-10 pb-10 text-center space-y-4 opacity-70">
-                        <div className="font-display font-black text-4xl italic tracking-tighter uppercase text-white drop-shadow-2xl">
+                    <div className="pt-6 md:pt-10 pb-10 text-center space-y-4 opacity-70">
+                        <div className="font-display font-black text-3xl md:text-4xl italic tracking-tighter uppercase text-white drop-shadow-2xl">
                             OPTA<span className="text-[var(--primary-color)]">TV</span>
                         </div>
                         <div className="space-y-1">
-                            <p className="text-[9px] font-mono uppercase tracking-[0.8em] text-white/60">Version 1.0.1 (Build 2025)</p>
-                            <p className="text-[8px] font-black uppercase tracking-widest text-white/40">Designed by MENKIR</p>
+                            <p className="text-[8px] md:text-[9px] font-mono uppercase tracking-[0.8em] text-white/60">Version 1.0.1 (Build 2025)</p>
+                            <p className="text-[7px] md:text-[8px] font-black uppercase tracking-widest text-white/40">Designed by MENKIR</p>
                         </div>
                     </div>
                 </div>
@@ -776,7 +772,7 @@ const App: React.FC = () => {
         <div className="min-h-screen font-sans text-slate-200 selection:bg-[var(--primary-color)] selection:text-black">
             {!isOnline && (
                 <div className="fixed top-0 left-0 right-0 z-[100] bg-red-600 text-white px-8 py-3 flex items-center justify-between font-black text-[10px] uppercase tracking-widest animate-pulse shadow-2xl">
-                    <span>Offline Mode Restricted</span>
+                    <span>Offline Restricted</span>
                     <button onClick={() => window.location.reload()} className="bg-white text-red-600 px-4 py-1 rounded-full text-[9px]">Reconnect</button>
                 </div>
             )}
@@ -784,21 +780,21 @@ const App: React.FC = () => {
             <main className="w-full mx-auto min-h-screen relative pb-20">
                 {activeTab === "live" && (
                     <div className="animate-fade-in flex flex-col min-h-screen pb-32">
-                        <div className="pt-10 px-8 pb-6 flex items-center justify-between z-30 sticky top-0 bg-black/40 backdrop-blur-2xl border-b border-white/10 shadow-xl">
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-2xl bg-[var(--primary-color)] flex items-center justify-center text-black font-display font-black italic text-3xl shadow-[0_0_20px_rgba(var(--primary-rgb),0.5)] border border-white/20">O</div>
-                                <span className="font-display font-black text-3xl text-white uppercase tracking-tighter drop-shadow-2xl">Opta<span className="text-[var(--primary-color)]">TV</span></span>
+                        <div className="pt-8 md:pt-10 px-4 md:px-8 pb-4 md:pb-6 flex items-center justify-between z-30 sticky top-0 bg-black/40 backdrop-blur-2xl border-b border-white/10 shadow-xl">
+                            <div className="flex items-center gap-3 md:gap-4">
+                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[var(--primary-color)] flex items-center justify-center text-black font-display font-black italic text-2xl md:text-3xl shadow-[0_0_20px_rgba(var(--primary-rgb),0.5)] border border-white/20">O</div>
+                                <span className="font-display font-black text-2xl md:text-3xl text-white uppercase tracking-tighter drop-shadow-2xl">Opta<span className="text-[var(--primary-color)]">TV</span></span>
                             </div>
-                            <a href="https://www.livescore.com/en/" target="_blank" rel="noreferrer" className="bg-white/90 backdrop-blur-md text-black px-6 py-3 rounded-xl font-display text-xl font-black uppercase tracking-widest hover:bg-[var(--primary-color)] transition-all shadow-xl">LIVESCORE</a>
+                            <a href="https://www.livescore.com/en/" target="_blank" rel="noreferrer" className="bg-white/90 backdrop-blur-md text-black px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl font-display text-sm md:text-xl font-black uppercase tracking-widest hover:bg-[var(--primary-color)] transition-all shadow-xl">LIVESCORE</a>
                         </div>
                         
-                        <div className="flex-1 px-6 mt-6">
+                        <div className="flex-1 px-4 md:px-6 mt-6 md:mt-8">
                             <StreamPlayer />
                         </div>
                         
-                        <div className="mt-8 px-6">
+                        <div className="mt-8 px-4 md:px-6 pb-4">
                             <IntelligenceFrame title="Featured Competitions" icon="fa-trophy">
-                                <div className="flex gap-5 overflow-x-auto no-scrollbar pb-2 px-1">
+                                <div className="flex gap-4 md:gap-5 overflow-x-auto no-scrollbar pb-2 px-1">
                                     {COMPETITIONS.map((league) => <LeagueItem key={league.id} league={league} />)}
                                 </div>
                             </IntelligenceFrame>
@@ -810,7 +806,7 @@ const App: React.FC = () => {
                 {activeTab === "settings" && <SettingsTab />}
             </main>
 
-            <nav className="fixed bottom-6 left-6 right-6 z-50 bg-black/60 backdrop-blur-3xl border border-white/10 h-24 rounded-[2.5rem] shadow-2xl flex items-center justify-around px-4">
+            <nav className="fixed bottom-6 left-5 right-5 md:left-6 md:right-6 z-50 bg-black/60 backdrop-blur-3xl border border-white/10 h-20 md:h-24 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl flex items-center justify-around px-2">
                 {[
                     { id: 'live', icon: 'fa-tv', label: 'LIVE' },
                     { id: 'news', icon: 'fa-newspaper', label: 'NEWS' }, 
@@ -820,10 +816,10 @@ const App: React.FC = () => {
                     <button 
                         key={item.id} 
                         onClick={() => setActiveTab(item.id as View)} 
-                        className={`flex flex-col items-center justify-center w-20 h-16 rounded-2xl transition-all duration-500 relative group ${activeTab === item.id ? "text-black bg-[var(--primary-color)] scale-110 shadow-[0_0_40px_rgba(var(--primary-rgb),0.4)]" : "text-white/40 hover:text-white"}`}
+                        className={`flex flex-col items-center justify-center w-16 md:w-20 h-14 md:h-16 rounded-xl md:rounded-2xl transition-all duration-500 relative group ${activeTab === item.id ? "text-black bg-[var(--primary-color)] scale-110 shadow-[0_0_40px_rgba(var(--primary-rgb),0.4)]" : "text-white/40 hover:text-white"}`}
                     >
-                        <i className={`fa-solid ${item.icon} text-2xl mb-1 group-hover:scale-110 transition-transform`}></i>
-                        <span className="text-[8px] font-black uppercase tracking-[0.2em]">{item.label}</span>
+                        <i className={`fa-solid ${item.icon} text-xl md:text-2xl mb-1 group-hover:scale-105 transition-transform`}></i>
+                        <span className="text-[7px] md:text-[8px] font-black uppercase tracking-[0.2em]">{item.label}</span>
                     </button>
                 ))}
             </nav>
