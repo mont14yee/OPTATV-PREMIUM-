@@ -238,18 +238,20 @@ const GOOGLE_NEWS_TOPIC_LINK = "https://news.google.com/topics/CAAqJQgKIh9DQkFTR
 const OPTA_ANALYST_LINK = "https://theanalyst.com";
 const POWER_RANKINGS_LINK = "https://theanalyst.com/competition/uefa-champions-league/power-rankings";
 const XG_MATRIX_LINK = "https://theanalyst.com/?s=XG&orderby=date%3ADESC&cat=23&post_type=post";
+const INSTAGRAM_SUPPORT_LINK = "https://www.instagram.com/menkirwolde?igsh=MTY4Nmh1N2FtMHVrNg==";
+const TARGET_GMAIL = "mon14yee@gmail.com";
 
 // --- UI Components ---
 
 const IntelligenceFrame: React.FC<{ title?: string; icon?: string; children: React.ReactNode }> = ({ title, icon, children }) => (
-    <div className="relative p-[1px] rounded-[2.2rem] md:rounded-[3.5rem] bg-gradient-to-br from-white/20 to-transparent overflow-hidden group/frame transition-all duration-700 shadow-2xl">
-        {/* Glassmorphism Inner Layer */}
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-3xl"></div>
-        <div className="relative z-10 p-5 md:p-12 space-y-6 md:space-y-8 bg-black/30 rounded-[2.1rem] md:rounded-[3.4rem] border border-white/5">
+    <div className="relative p-[1px] rounded-[2.2rem] md:rounded-[3.5rem] bg-gradient-to-br from-white/10 to-transparent overflow-hidden group/frame transition-all duration-700 shadow-2xl">
+        {/* Deep Slate Glass Layer for visibility on the new solid color theme */}
+        <div className="absolute inset-0 bg-slate-900/70 backdrop-blur-3xl"></div>
+        <div className="relative z-10 p-5 md:p-12 space-y-6 md:space-y-8 bg-black/20 rounded-[2.1rem] md:rounded-[3.4rem] border border-white/5">
             {title && (
                 <div className="flex items-center gap-4 mb-1 md:mb-2">
                     {icon && <i className={`fa-solid ${icon} text-[var(--primary-color)] text-lg md:text-xl drop-shadow-[0_0_8px_rgba(var(--primary-rgb),0.6)]`}></i>}
-                    <h3 className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-white/70">{title}</h3>
+                    <h3 className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-white/80">{title}</h3>
                 </div>
             )}
             {children}
@@ -287,14 +289,14 @@ const StreamPlayer: React.FC = () => {
     const handleWatch = () => window.open(HOT_MATCH_LINK, '_blank');
     return (
         <IntelligenceFrame>
-            <div className="relative w-full h-[35vh] md:h-[50vh] bg-black/40 backdrop-blur-md overflow-hidden group rounded-[1.8rem] md:rounded-[2.5rem] border border-white/10 flex flex-col items-center justify-center">
+            <div className="relative w-full h-[35vh] md:h-[50vh] bg-slate-950/60 backdrop-blur-md overflow-hidden group rounded-[1.8rem] md:rounded-[2.5rem] border border-white/10 flex flex-col items-center justify-center">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--primary-rgb),0.1),transparent_70%)]"></div>
                 
                 <div className="relative z-10 w-full max-w-2xl px-6 md:px-8 flex flex-col items-center text-center">
-                    <h1 className="text-white text-3xl md:text-6xl font-bold tracking-tight mb-2 md:mb-3 drop-shadow-2xl">
+                    <h1 className="text-white text-3xl md:text-6xl font-bold tracking-tight mb-2 md:mb-3 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
                         Watch For Free
                     </h1>
-                    <p className="text-white/70 text-xs md:text-lg font-medium mb-8 md:mb-10 max-w-md">
+                    <p className="text-white/80 text-xs md:text-lg font-medium mb-8 md:mb-10 max-w-md drop-shadow-sm">
                         Global HD Broadcast Stream
                     </p>
 
@@ -311,12 +313,12 @@ const StreamPlayer: React.FC = () => {
                         </div>
                     </button>
 
-                    <div className="mt-6 md:mt-8 flex items-center gap-4 md:gap-6 text-white/60 font-bold uppercase tracking-[0.2em] text-[9px] md:text-[10px]">
+                    <div className="mt-6 md:mt-8 flex items-center gap-4 md:gap-6 text-white/80 font-bold uppercase tracking-[0.2em] text-[9px] md:text-[10px]">
                         <div className="flex items-center gap-2 md:gap-3">
                             <i className="fa-solid fa-earth-americas text-xs md:text-sm"></i>
                             All Regions
                         </div>
-                        <div className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-white/20"></div>
+                        <div className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-white/40"></div>
                         <div className="flex items-center gap-2 md:gap-3">
                             <i className="fa-solid fa-bolt text-xs md:text-sm"></i>
                             Low Latency
@@ -336,10 +338,10 @@ const OptaTab: React.FC = () => {
             <div className="px-5 md:px-8 mb-8 md:mb-10 relative z-10">
                 <div className="flex items-center gap-4 mb-3 md:mb-4">
                     <div className="w-2 h-2 rounded-full bg-[var(--primary-color)] shadow-[0_0_12px_var(--primary-color)]"></div>
-                    <span className="text-[10px] md:text-xs font-mono text-[var(--primary-color)] uppercase tracking-widest font-black drop-shadow-sm">Data Intelligence Engine</span>
+                    <span className="text-[10px] md:text-xs font-mono text-slate-800 uppercase tracking-widest font-black drop-shadow-sm">Data Intelligence Engine</span>
                 </div>
-                <h2 className="text-4xl md:text-6xl font-display font-black text-white uppercase tracking-tighter leading-none drop-shadow-2xl">
-                    OPTA <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary-color)] to-white">VISION</span>
+                <h2 className="text-4xl md:text-6xl font-display font-black text-slate-900 uppercase tracking-tighter leading-none drop-shadow-lg">
+                    OPTA <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500">VISION</span>
                 </h2>
             </div>
 
@@ -347,10 +349,10 @@ const OptaTab: React.FC = () => {
                 <IntelligenceFrame title="Performance Model" icon="fa-microchip">
                     <div 
                         onClick={() => window.open(POWER_RANKINGS_LINK, "_blank")}
-                        className="bg-black/40 backdrop-blur-md border border-white/10 rounded-[2.2rem] md:rounded-[3.2rem] p-0.5 md:p-1 shadow-3xl relative overflow-hidden group/terminal cursor-pointer hover:border-[var(--primary-color)]/40 transition-all duration-500"
+                        className="bg-slate-900/40 backdrop-blur-md border border-white/10 rounded-[2.2rem] md:rounded-[3.2rem] p-0.5 md:p-1 shadow-3xl relative overflow-hidden group/terminal cursor-pointer hover:border-[var(--primary-color)]/40 transition-all duration-500"
                     >
                         <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary-color)]/10 via-transparent to-transparent opacity-0 group-hover/terminal:opacity-100 transition-opacity"></div>
-                        <div className="relative z-10 bg-black/60 rounded-[2.1rem] md:rounded-[3.1rem] p-6 md:p-10 border border-white/5">
+                        <div className="relative z-10 bg-slate-950/70 rounded-[2.1rem] md:rounded-[3.1rem] p-6 md:p-10 border border-white/5">
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 md:mb-12">
                                 <div className="flex items-center gap-4 md:gap-5">
                                     <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-[var(--primary-color)]/20 flex items-center justify-center border border-[var(--primary-color)]/30 shadow-[0_0_20px_rgba(var(--primary-rgb),0.2)]">
@@ -358,19 +360,19 @@ const OptaTab: React.FC = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-2xl md:text-4xl font-display font-bold uppercase tracking-tight leading-none mb-1 text-white">Power Rankings</h3>
-                                        <p className="text-white/50 text-[9px] md:text-[10px] font-mono uppercase tracking-widest font-bold">Real-Time Global Model</p>
+                                        <p className="text-white/60 text-[9px] md:text-[10px] font-mono uppercase tracking-widest font-bold">Real-Time Global Model</p>
                                     </div>
                                 </div>
                                 <div className="self-start md:self-center flex items-center gap-3 bg-white/10 px-4 py-2 rounded-full border border-white/20 group-hover/terminal:bg-[var(--primary-color)]/20 transition-all">
                                     <span className="w-2 h-2 rounded-full bg-[var(--primary-color)] animate-pulse"></span>
-                                    <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/80 group-hover/terminal:text-white">Live Index</span>
+                                    <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white group-hover/terminal:text-white">Live Index</span>
                                 </div>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
-                                <div className="bg-black/60 rounded-2xl md:rounded-3xl p-5 md:p-6 border border-white/10 hover:bg-black/80 transition-colors shadow-inner">
+                                <div className="bg-slate-900/60 rounded-2xl md:rounded-3xl p-5 md:p-6 border border-white/10 hover:bg-slate-900/80 transition-colors shadow-inner">
                                     <div className="flex items-center justify-between mb-3 md:mb-4">
-                                        <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/40">Win Probability</span>
+                                        <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/60">Win Probability</span>
                                         <i className="fa-solid fa-chart-pie text-purple-400"></i>
                                     </div>
                                     <div className="flex items-end gap-2 md:gap-3 mb-2">
@@ -382,14 +384,14 @@ const OptaTab: React.FC = () => {
                                     </div>
                                 </div>
 
-                                <div className="bg-black/60 rounded-2xl md:rounded-3xl p-5 md:p-6 border border-white/10 hover:bg-black/80 transition-colors shadow-inner">
+                                <div className="bg-slate-900/60 rounded-2xl md:rounded-3xl p-5 md:p-6 border border-white/10 hover:bg-slate-900/80 transition-colors shadow-inner">
                                     <div className="flex items-center justify-between mb-3 md:mb-4">
-                                        <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/40">Attack Efficiency</span>
+                                        <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/60">Attack Efficiency</span>
                                         <i className="fa-solid fa-fire text-orange-500"></i>
                                     </div>
                                     <div className="flex items-end gap-2 md:gap-3 mb-2">
                                         <span className="text-3xl md:text-4xl font-display font-bold text-white">8.1</span>
-                                        <span className="text-white/40 text-[9px] md:text-[10px] font-mono mb-1 uppercase tracking-widest">xG/Match</span>
+                                        <span className="text-white/50 text-[9px] md:text-[10px] font-mono mb-1 uppercase tracking-widest">xG/Match</span>
                                     </div>
                                     <div className="flex gap-1 h-2 md:h-3 items-end">
                                         {[40, 70, 55, 90, 65, 80, 45].map((h, i) => (
@@ -398,9 +400,9 @@ const OptaTab: React.FC = () => {
                                     </div>
                                 </div>
 
-                                <div className="bg-black/60 rounded-2xl md:rounded-3xl p-5 md:p-6 border border-white/10 hover:bg-black/80 transition-colors shadow-inner">
+                                <div className="bg-slate-900/60 rounded-2xl md:rounded-3xl p-5 md:p-6 border border-white/10 hover:bg-slate-900/80 transition-colors shadow-inner">
                                     <div className="flex items-center justify-between mb-3 md:mb-4">
-                                        <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/40">Defensive Rating</span>
+                                        <span className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-white/60">Defensive Rating</span>
                                         <i className="fa-solid fa-shield-halved text-cyan-400"></i>
                                     </div>
                                     <div className="flex items-end gap-2 md:gap-3 mb-2">
@@ -411,7 +413,7 @@ const OptaTab: React.FC = () => {
                                         <div className="flex -space-x-1.5 md:-space-x-2">
                                             {[1, 2, 3].map(i => <div key={i} className="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-black bg-white/20"></div>)}
                                         </div>
-                                        <span className="text-[8px] md:text-[9px] text-white/50 font-black uppercase tracking-widest italic">Elite Category</span>
+                                        <span className="text-[8px] md:text-[9px] text-white/60 font-black uppercase tracking-widest italic">Elite Category</span>
                                     </div>
                                 </div>
                             </div>
@@ -427,7 +429,7 @@ const OptaTab: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4 md:gap-6 pb-12">
                     <div 
                         onClick={() => window.open(OPTA_ANALYST_LINK, "_blank")}
-                        className="bg-black/60 backdrop-blur-xl border border-white/10 rounded-[1.8rem] md:rounded-[2.5rem] p-6 md:p-10 hover:bg-black/80 transition-all cursor-pointer group shadow-2xl relative overflow-hidden"
+                        className="bg-slate-900/70 backdrop-blur-xl border border-white/10 rounded-[1.8rem] md:rounded-[2.5rem] p-6 md:p-10 hover:bg-slate-950/80 transition-all cursor-pointer group shadow-2xl relative overflow-hidden"
                     >
                         <i className="fa-solid fa-fire text-orange-500 text-3xl md:text-4xl mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500 block drop-shadow-[0_0_10px_rgba(249,115,22,0.5)]"></i>
                         <h4 className="font-display font-bold text-2xl md:text-3xl uppercase mb-1 tracking-tight text-white">Heatmaps</h4>
@@ -435,7 +437,7 @@ const OptaTab: React.FC = () => {
 
                     <div 
                         onClick={() => window.open(XG_MATRIX_LINK, "_blank")}
-                        className="bg-black/60 backdrop-blur-xl border border-white/10 rounded-[1.8rem] md:rounded-[2.5rem] p-6 md:p-10 hover:bg-black/80 transition-all cursor-pointer group shadow-2xl relative overflow-hidden"
+                        className="bg-slate-900/70 backdrop-blur-xl border border-white/10 rounded-[1.8rem] md:rounded-[2.5rem] p-6 md:p-10 hover:bg-slate-950/80 transition-all cursor-pointer group shadow-2xl relative overflow-hidden"
                     >
                         <i className="fa-solid fa-bullseye text-cyan-400 text-3xl md:text-4xl mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500 block drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]"></i>
                         <h4 className="font-display font-bold text-2xl md:text-3xl uppercase mb-1 tracking-tight text-white">xG Matrix</h4>
@@ -454,10 +456,10 @@ const NewsTab: React.FC = () => {
                     <div className="space-y-1 md:space-y-2">
                         <div className="flex items-center gap-3">
                             <div className="w-1.5 h-5 md:w-2 md:h-6 bg-[var(--primary-color)] rounded-full shadow-[0_0_8px_var(--primary-color)]"></div>
-                            <span className="text-[10px] md:text-xs font-mono text-[var(--primary-color)] uppercase tracking-[0.4em] font-black drop-shadow-sm">Intelligence Terminal</span>
+                            <span className="text-[10px] md:text-xs font-mono text-slate-800 uppercase tracking-[0.4em] font-black drop-shadow-sm">Intelligence Terminal</span>
                         </div>
-                        <h2 className="text-4xl md:text-6xl font-display font-bold text-white uppercase tracking-tighter leading-none drop-shadow-2xl">
-                            GLOBAL <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">REPORTS</span>
+                        <h2 className="text-4xl md:text-6xl font-display font-bold text-slate-900 uppercase tracking-tighter leading-none drop-shadow-lg">
+                            GLOBAL <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500">REPORTS</span>
                         </h2>
                     </div>
                 </div>
@@ -465,7 +467,7 @@ const NewsTab: React.FC = () => {
                 <IntelligenceFrame title="Hub Network" icon="fa-satellite-dish">
                     <div 
                         onClick={() => window.open(GOOGLE_NEWS_TOPIC_LINK, "_blank")}
-                        className="group/news-hub relative w-full aspect-[4/3] md:aspect-[21/9] bg-black/40 backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[3rem] overflow-hidden cursor-pointer hover:border-[var(--primary-color)]/30 transition-all duration-700 shadow-3xl"
+                        className="group/news-hub relative w-full aspect-[4/3] md:aspect-[21/9] bg-slate-900/60 backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[3rem] overflow-hidden cursor-pointer hover:border-[var(--primary-color)]/30 transition-all duration-700 shadow-3xl"
                     >
                         <div className="absolute inset-0 opacity-10 pointer-events-none">
                             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
@@ -496,19 +498,19 @@ const NewsTab: React.FC = () => {
                 </IntelligenceFrame>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 pb-12">
-                    <div onClick={() => window.open(GOOGLE_NEWS_TOPIC_LINK, "_blank")} className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] hover:bg-black/80 transition-all cursor-pointer group flex items-center justify-between shadow-2xl">
+                    <div onClick={() => window.open(GOOGLE_NEWS_TOPIC_LINK, "_blank")} className="bg-slate-900/70 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] hover:bg-slate-950 transition-all cursor-pointer group flex items-center justify-between shadow-2xl">
                         <div className="space-y-2 md:space-y-4">
                             <h4 className="text-xl md:text-2xl font-display font-bold uppercase tracking-tight text-white group-hover:text-[var(--primary-color)] transition-colors">Transfer Radar</h4>
-                            <p className="text-[11px] md:text-sm text-white/50 font-medium">Verified move tracking analytics.</p>
+                            <p className="text-[11px] md:text-sm text-white/60 font-medium">Verified move tracking analytics.</p>
                         </div>
                         <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[var(--primary-color)] group-hover:text-black transition-all shadow-lg">
                             <i className="fa-solid fa-money-bill-transfer text-lg md:text-xl"></i>
                         </div>
                     </div>
-                    <div onClick={() => window.open(GOOGLE_NEWS_TOPIC_LINK, "_blank")} className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] hover:bg-black/80 transition-all cursor-pointer group flex items-center justify-between shadow-2xl">
+                    <div onClick={() => window.open(GOOGLE_NEWS_TOPIC_LINK, "_blank")} className="bg-slate-900/70 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] hover:bg-slate-950 transition-all cursor-pointer group flex items-center justify-between shadow-2xl">
                         <div className="space-y-2 md:space-y-4">
                             <h4 className="text-xl md:text-2xl font-display font-bold uppercase tracking-tight text-white group-hover:text-blue-400 transition-colors">Medical Bulletin</h4>
-                            <p className="text-[11px] md:text-sm text-white/50 font-medium">Real-time recovery data flow.</p>
+                            <p className="text-[11px] md:text-sm text-white/60 font-medium">Real-time recovery data flow.</p>
                         </div>
                         <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-black transition-all shadow-lg">
                             <i className="fa-solid fa-briefcase-medical text-lg md:text-xl"></i>
@@ -530,8 +532,8 @@ const PremiumModal: React.FC<{
     if (!isOpen) return null;
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-5 md:p-6 animate-fade-in">
-            <div className="absolute inset-0 bg-black/80 backdrop-blur-3xl" onClick={onClose}></div>
-            <div className="relative w-full max-w-2xl bg-black/80 border border-white/20 rounded-[2.5rem] md:rounded-[3rem] shadow-[0_0_100px_rgba(0,0,0,0.8)] overflow-hidden animate-slide-up">
+            <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-3xl" onClick={onClose}></div>
+            <div className="relative w-full max-w-2xl bg-slate-950/90 border border-white/20 rounded-[2.5rem] md:rounded-[3rem] shadow-[0_0_100px_rgba(0,0,0,0.8)] overflow-hidden animate-slide-up">
                 <div className="p-8 md:p-12">
                     <div className="flex items-center justify-between mb-8 md:mb-10">
                         <div className="flex items-center gap-4 md:gap-6">
@@ -560,7 +562,7 @@ const SettingsTab: React.FC = () => {
     const [selectedLang, setSelectedLang] = useState(() => localStorage.getItem('appLanguage') || 'en');
     const [isSaving, setIsSaving] = useState(false);
     const [showNotice, setShowNotice] = useState(false);
-    const [activeModal, setActiveModal] = useState<'privacy' | 'tips' | null>(null);
+    const [activeModal, setActiveModal] = useState<'privacy' | 'tips' | 'signin' | null>(null);
 
     const handleLanguageSelect = (code: string) => {
         setIsSaving(true);
@@ -573,7 +575,66 @@ const SettingsTab: React.FC = () => {
         }, 800);
     };
 
+    const handleTacticalSync = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const email = formData.get('sync_email');
+        const username = formData.get('sync_username');
+        const message = formData.get('sync_reqs');
+
+        const body = `TACTICAL SYNC REQUEST\n\nUsername: ${username}\nEmail: ${email}\n\nRequirements:\n${message}\n\nSent from OptaTV Portal.`;
+        const mailtoUrl = `mailto:${TARGET_GMAIL}?subject=OPTATV Tactical Sync Request - ${username}&body=${encodeURIComponent(body)}`;
+        
+        window.location.href = mailtoUrl;
+        setActiveModal(null);
+    };
+
     const modalContent = {
+        signin: (
+            <form onSubmit={handleTacticalSync} className="space-y-5">
+                <div className="bg-white/5 p-6 rounded-3xl border border-white/10">
+                    <p className="text-white/70 text-sm mb-6 leading-relaxed">Please provide your details to request access to the high-level Tactical Sync service. We will respond with the latest update files to your provided Gmail.</p>
+                    <div className="space-y-4">
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 ml-1">Callsign / Username</label>
+                            <input 
+                                name="sync_username"
+                                required
+                                type="text" 
+                                placeholder="E.g. ScoutPrime"
+                                className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white text-sm focus:outline-none focus:border-[var(--primary-color)]/50 transition-colors"
+                            />
+                        </div>
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 ml-1">Verified Email Address</label>
+                            <input 
+                                name="sync_email"
+                                required
+                                type="email" 
+                                placeholder="your@email.com"
+                                className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white text-sm focus:outline-none focus:border-[var(--primary-color)]/50 transition-colors"
+                            />
+                        </div>
+                        <div className="space-y-2">
+                            <label className="text-[10px] font-black uppercase tracking-[0.2em] text-white/40 ml-1">Tactical Requirements</label>
+                            <textarea 
+                                name="sync_reqs"
+                                required
+                                rows={3}
+                                placeholder="Describe the tactical modules or updates you require..."
+                                className="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-5 py-4 text-white text-sm focus:outline-none focus:border-[var(--primary-color)]/50 transition-colors no-scrollbar resize-none"
+                            ></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button 
+                    type="submit"
+                    className="w-full py-5 bg-[var(--primary-color)] text-black rounded-2xl font-display font-black text-xl uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all shadow-xl"
+                >
+                    Initialize Sync Request
+                </button>
+            </form>
+        ),
         tips: (
             <div className="space-y-6">
                 {[
@@ -587,7 +648,7 @@ const SettingsTab: React.FC = () => {
                             <span className="w-6 h-6 rounded-full bg-[var(--primary-color)]/10 text-[10px] flex items-center justify-center border border-[var(--primary-color)]/20">0{idx+1}</span>
                             {item.t}
                         </h4>
-                        <p className="text-white/70 text-sm leading-relaxed font-medium">{item.d}</p>
+                        <p className="text-white/80 text-sm leading-relaxed font-medium">{item.d}</p>
                     </div>
                 ))}
             </div>
@@ -595,7 +656,7 @@ const SettingsTab: React.FC = () => {
         privacy: (
             <div className="space-y-8">
                 <div className="space-y-4">
-                    <p className="text-white/80 font-medium leading-relaxed">Your data security is managed with the same precision we apply to Opta's global football analytics. We operate on a strictly <span className="text-white font-black">Privacy-First Architecture.</span></p>
+                    <p className="text-white/90 font-medium leading-relaxed">Your data security is managed with the same precision we apply to Opta's global football analytics. We operate on a strictly <span className="text-white font-black">Privacy-First Architecture.</span></p>
                 </div>
                 <div className="grid grid-cols-1 gap-4">
                     {[
@@ -607,7 +668,7 @@ const SettingsTab: React.FC = () => {
                             <i className={`fa-solid ${item.icon} text-xl text-[var(--primary-color)] mt-1`}></i>
                             <div>
                                 <h5 className="text-white font-display font-bold uppercase text-sm mb-1 tracking-widest">{item.t}</h5>
-                                <p className="text-white/50 text-[11px] leading-relaxed font-bold">{item.d}</p>
+                                <p className="text-white/60 text-[11px] leading-relaxed font-bold">{item.d}</p>
                             </div>
                         </div>
                     ))}
@@ -620,24 +681,27 @@ const SettingsTab: React.FC = () => {
         <div className="px-4 md:px-8 pt-28 pb-40 min-h-screen relative animate-fade-in overflow-x-hidden">
             <div className="max-w-4xl mx-auto space-y-10 md:space-y-16 relative z-10">
                 <div className="flex items-center gap-5 md:gap-6">
-                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-[var(--primary-color)]/10 border border-[var(--primary-color)]/30 flex items-center justify-center shadow-[0_0_30px_rgba(var(--primary-rgb),0.2)] backdrop-blur-xl">
-                        <i className="fa-solid fa-sliders text-[var(--primary-color)] text-2xl md:text-3xl drop-shadow-md"></i>
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-slate-900/40 border border-white/10 flex items-center justify-center shadow-lg backdrop-blur-xl">
+                        <i className="fa-solid fa-sliders text-slate-800 text-2xl md:text-3xl drop-shadow-sm"></i>
                     </div>
                     <div>
-                        <h2 className="text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tighter leading-none mb-1 drop-shadow-2xl">Settings</h2>
-                        <p className="text-[10px] md:text-xs font-mono text-white/50 uppercase tracking-[0.4em] font-black drop-shadow-sm">Configure Experience</p>
+                        <h2 className="text-4xl md:text-5xl font-display font-black text-slate-900 uppercase tracking-tighter leading-none mb-1 drop-shadow-sm">Settings</h2>
+                        <p className="text-[10px] md:text-xs font-mono text-slate-600 uppercase tracking-[0.4em] font-black drop-shadow-sm">Configure Experience</p>
                     </div>
                 </div>
 
                 <div className="space-y-10 md:space-y-12">
                     <IntelligenceFrame title="Subscription & Access" icon="fa-crown">
-                        <div className="group/sync relative bg-gradient-to-br from-white/5 to-transparent backdrop-blur-xl border border-white/10 p-1 rounded-[2rem] md:rounded-[3.2rem] shadow-3xl">
-                            <div className="bg-black/40 rounded-[1.9rem] md:rounded-[3.1rem] p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
+                        <div className="group/sync relative bg-slate-900/30 backdrop-blur-xl border border-white/10 p-1 rounded-[2rem] md:rounded-[3.2rem] shadow-3xl">
+                            <div className="bg-slate-950/60 rounded-[1.9rem] md:rounded-[3.1rem] p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10">
                                 <div className="space-y-3 text-center md:text-left">
                                     <h3 className="text-2xl md:text-3xl font-display font-bold uppercase tracking-tight text-white drop-shadow-md">Sync Your Tactics</h3>
-                                    <p className="text-white/60 text-sm md:text-base font-bold max-w-sm">Unlock premium scouting preferences across tactical units.</p>
+                                    <p className="text-white/70 text-sm md:text-base font-bold max-w-sm">Unlock premium scouting preferences across tactical units.</p>
                                 </div>
-                                <button className="w-full md:w-auto bg-white text-black px-10 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl font-display font-black text-lg md:text-xl uppercase tracking-widest hover:bg-[var(--primary-color)] transition-all shadow-2xl active:scale-95">
+                                <button 
+                                    onClick={() => setActiveModal('signin')}
+                                    className="w-full md:w-auto bg-white text-black px-10 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl font-display font-black text-lg md:text-xl uppercase tracking-widest hover:bg-[var(--primary-color)] transition-all shadow-2xl active:scale-95"
+                                >
                                     Sign In Now
                                 </button>
                             </div>
@@ -646,8 +710,8 @@ const SettingsTab: React.FC = () => {
 
                     <IntelligenceFrame title="System Preferences" icon="fa-gears">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                            <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-[1.8rem] md:rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
-                                <h3 className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] mb-4 md:mb-6 flex items-center gap-2">
+                            <div className="bg-slate-900/40 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-[1.8rem] md:rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+                                <h3 className="text-[9px] font-black text-white/60 uppercase tracking-[0.4em] mb-4 md:mb-6 flex items-center gap-2">
                                     <i className="fa-solid fa-palette text-[var(--primary-color)]"></i> Theme Accent
                                 </h3>
                                 <div className="flex items-center gap-3 md:gap-4">
@@ -670,8 +734,8 @@ const SettingsTab: React.FC = () => {
                                 </div>
                             </div>
 
-                            <div className="bg-black/60 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-[1.8rem] md:rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
-                                <h3 className="text-[9px] font-black text-white/40 uppercase tracking-[0.4em] mb-4 md:mb-6 flex items-center gap-3">
+                            <div className="bg-slate-900/40 backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-[1.8rem] md:rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+                                <h3 className="text-[9px] font-black text-white/60 uppercase tracking-[0.4em] mb-4 md:mb-6 flex items-center gap-3">
                                     <i className="fa-solid fa-language text-blue-400"></i> Global Locale
                                     {isSaving && <i className="fa-solid fa-circle-notch fa-spin text-xs ml-auto text-[var(--primary-color)]"></i>}
                                 </h3>
@@ -681,11 +745,11 @@ const SettingsTab: React.FC = () => {
                                             key={lang.code}
                                             onClick={() => handleLanguageSelect(lang.code)}
                                             disabled={isSaving}
-                                            className={`px-5 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl border text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] transition-all flex items-center justify-between group/lang ${selectedLang === lang.code ? 'bg-white text-black border-white shadow-2xl' : 'bg-white/5 text-white/60 border-white/10 hover:border-white/30 hover:bg-white/10'}`}
+                                            className={`px-5 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl border text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] transition-all flex items-center justify-between group/lang ${selectedLang === lang.code ? 'bg-white text-black border-white shadow-2xl' : 'bg-slate-900/40 text-white/80 border-white/10 hover:border-white/30 hover:bg-slate-900/60'}`}
                                         >
                                             <div className="flex flex-col items-start leading-tight">
                                                 <span>{lang.name}</span>
-                                                <span className={`text-[7px] md:text-[8px] font-mono mt-0.5 ${selectedLang === lang.code ? 'text-black/50' : 'text-white/30'}`}>{lang.region}</span>
+                                                <span className={`text-[7px] md:text-[8px] font-mono mt-0.5 ${selectedLang === lang.code ? 'text-black/50' : 'text-white/40'}`}>{lang.region}</span>
                                             </div>
                                             <div className="flex items-center gap-3">
                                                 {selectedLang === lang.code && <i className="fa-solid fa-check-double text-blue-500 animate-fade-in text-xs"></i>}
@@ -701,7 +765,7 @@ const SettingsTab: React.FC = () => {
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                             {[
                                 { id: 'share', icon: 'fa-share-nodes', label: 'Share', color: 'text-emerald-400', url: 'https://www.tiktok.com/@menkirteamir?_r=1&_t=ZM-92PcIl7bzLQ' },
-                                { id: 'updates', icon: 'fa-rocket', label: 'Updates', color: 'text-purple-400', url: 'https://www.instagram.com/menkirwolde?igsh=MTY4Nmh1N2FtMHVrNg==' },
+                                { id: 'updates', icon: 'fa-rocket', label: 'Updates', color: 'text-purple-400', url: INSTAGRAM_SUPPORT_LINK },
                                 { id: 'tips', icon: 'fa-lightbulb', label: 'Tips', color: 'text-yellow-400', action: () => setActiveModal('tips') },
                                 { id: 'privacy', icon: 'fa-user-lock', label: 'Privacy', color: 'text-red-400', action: () => setActiveModal('privacy') },
                             ].map(item => (
@@ -714,36 +778,48 @@ const SettingsTab: React.FC = () => {
                                             window.open(item.url, '_blank');
                                         }
                                     }}
-                                    className="bg-black/40 backdrop-blur-xl border border-white/10 p-5 md:p-6 rounded-[1.5rem] md:rounded-3xl hover:bg-black/60 transition-all group flex flex-col items-center gap-2 md:gap-3 shadow-lg"
+                                    className="bg-slate-900/60 backdrop-blur-xl border border-white/10 p-5 md:p-6 rounded-[1.5rem] md:rounded-3xl hover:bg-slate-950/80 transition-all group flex flex-col items-center gap-2 md:gap-3 shadow-lg"
                                 >
                                     <i className={`fa-solid ${item.icon} ${item.color} text-xl md:text-2xl group-hover:scale-110 transition-transform drop-shadow-md`}></i>
-                                    <span className="text-[8px] md:text-[9px] font-black uppercase tracking-widest text-white/70">{item.label}</span>
+                                    <span className="text-[8px] md:text-[9px] font-black uppercase tracking-widest text-white/80">{item.label}</span>
                                 </button>
                             ))}
                         </div>
                     </IntelligenceFrame>
 
-                    <div className="bg-black/60 backdrop-blur-2xl border border-white/10 p-6 md:p-8 rounded-[1.8rem] md:rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-6 shadow-3xl">
+                    <div className="bg-slate-900/60 backdrop-blur-2xl border border-white/10 p-6 md:p-8 rounded-[1.8rem] md:rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-6 shadow-3xl">
                         <div className="flex items-center gap-4 text-center md:text-left">
-                            <i className="fa-solid fa-circle-info text-white/40 text-xl hidden sm:block"></i>
-                            <span className="text-xs md:text-sm font-bold text-white/60">Professional tactical support and verified legal framework access.</span>
+                            <i className="fa-solid fa-circle-info text-white/60 text-xl hidden sm:block"></i>
+                            <span className="text-xs md:text-sm font-bold text-white/80">Professional tactical support and verified legal framework access.</span>
                         </div>
-                        <button className="w-full md:w-auto text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all text-white">
+                        <button 
+                            onClick={() => window.open(INSTAGRAM_SUPPORT_LINK, '_blank')}
+                            className="w-full md:w-auto text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all text-white shadow-xl"
+                        >
                             Support Hub
                         </button>
                     </div>
 
-                    <div className="pt-6 md:pt-10 pb-10 text-center space-y-4 opacity-70">
-                        <div className="font-display font-black text-3xl md:text-4xl italic tracking-tighter uppercase text-white drop-shadow-2xl">
-                            OPTA<span className="text-[var(--primary-color)]">TV</span>
+                    <div className="pt-6 md:pt-10 pb-10 text-center space-y-4 opacity-80">
+                        <div className="font-display font-black text-3xl md:text-4xl italic tracking-tighter uppercase text-slate-900 drop-shadow-sm">
+                            OPTA<span className="text-slate-500">TV</span>
                         </div>
                         <div className="space-y-1">
-                            <p className="text-[8px] md:text-[9px] font-mono uppercase tracking-[0.8em] text-white/60">Version 1.0.1 (Build 2025)</p>
-                            <p className="text-[7px] md:text-[8px] font-black uppercase tracking-widest text-white/40">Designed by MENKIR</p>
+                            <p className="text-[8px] md:text-[9px] font-mono uppercase tracking-[0.8em] text-slate-600">Version 1.0.1 (Build 2025)</p>
+                            <p className="text-[7px] md:text-[8px] font-black uppercase tracking-widest text-slate-500">Designed by MENKIR</p>
                         </div>
                     </div>
                 </div>
             </div>
+            {activeModal && (
+                <PremiumModal 
+                    isOpen={!!activeModal} 
+                    onClose={() => setActiveModal(null)}
+                    title={activeModal === 'signin' ? 'Tactical Sync' : activeModal === 'tips' ? 'Tips & Tricks' : 'Privacy Policy'}
+                    icon={activeModal === 'signin' ? 'fa-fingerprint' : activeModal === 'tips' ? 'fa-lightbulb' : 'fa-user-lock'}
+                    content={modalContent[activeModal]}
+                />
+            )}
         </div>
     );
 };
@@ -780,12 +856,12 @@ const App: React.FC = () => {
             <main className="w-full mx-auto min-h-screen relative pb-20">
                 {activeTab === "live" && (
                     <div className="animate-fade-in flex flex-col min-h-screen pb-32">
-                        <div className="pt-8 md:pt-10 px-4 md:px-8 pb-4 md:pb-6 flex items-center justify-between z-30 sticky top-0 bg-black/40 backdrop-blur-2xl border-b border-white/10 shadow-xl">
+                        <div className="pt-8 md:pt-10 px-4 md:px-8 pb-4 md:pb-6 flex items-center justify-between z-30 sticky top-0 bg-slate-900/30 backdrop-blur-2xl border-b border-white/10 shadow-lg">
                             <div className="flex items-center gap-3 md:gap-4">
-                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[var(--primary-color)] flex items-center justify-center text-black font-display font-black italic text-2xl md:text-3xl shadow-[0_0_20px_rgba(var(--primary-rgb),0.5)] border border-white/20">O</div>
-                                <span className="font-display font-black text-2xl md:text-3xl text-white uppercase tracking-tighter drop-shadow-2xl">Opta<span className="text-[var(--primary-color)]">TV</span></span>
+                                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-slate-900 flex items-center justify-center text-[var(--primary-color)] font-display font-black italic text-2xl md:text-3xl shadow-xl border border-white/10">O</div>
+                                <span className="font-display font-black text-2xl md:text-3xl text-slate-900 uppercase tracking-tighter drop-shadow-sm">Opta<span className="text-slate-600">TV</span></span>
                             </div>
-                            <a href="https://www.livescore.com/en/" target="_blank" rel="noreferrer" className="bg-white/90 backdrop-blur-md text-black px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl font-display text-sm md:text-xl font-black uppercase tracking-widest hover:bg-[var(--primary-color)] transition-all shadow-xl">LIVESCORE</a>
+                            <a href="https://www.livescore.com/en/" target="_blank" rel="noreferrer" className="bg-slate-950 text-[var(--primary-color)] px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl font-display text-sm md:text-xl font-black uppercase tracking-widest hover:brightness-125 transition-all shadow-2xl border border-white/5">LIVESCORE</a>
                         </div>
                         
                         <div className="flex-1 px-4 md:px-6 mt-6 md:mt-8">
@@ -806,7 +882,7 @@ const App: React.FC = () => {
                 {activeTab === "settings" && <SettingsTab />}
             </main>
 
-            <nav className="fixed bottom-6 left-5 right-5 md:left-6 md:right-6 z-50 bg-black/60 backdrop-blur-3xl border border-white/10 h-20 md:h-24 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl flex items-center justify-around px-2">
+            <nav className="fixed bottom-6 left-5 right-5 md:left-6 md:right-6 z-50 bg-slate-900/80 backdrop-blur-3xl border border-white/10 h-20 md:h-24 rounded-[2rem] md:rounded-[2.5rem] shadow-[0_10px_50px_rgba(0,0,0,0.5)] flex items-center justify-around px-2">
                 {[
                     { id: 'live', icon: 'fa-tv', label: 'LIVE' },
                     { id: 'news', icon: 'fa-newspaper', label: 'NEWS' }, 
@@ -816,7 +892,7 @@ const App: React.FC = () => {
                     <button 
                         key={item.id} 
                         onClick={() => setActiveTab(item.id as View)} 
-                        className={`flex flex-col items-center justify-center w-16 md:w-20 h-14 md:h-16 rounded-xl md:rounded-2xl transition-all duration-500 relative group ${activeTab === item.id ? "text-black bg-[var(--primary-color)] scale-110 shadow-[0_0_40px_rgba(var(--primary-rgb),0.4)]" : "text-white/40 hover:text-white"}`}
+                        className={`flex flex-col items-center justify-center w-16 md:w-20 h-14 md:h-16 rounded-xl md:rounded-2xl transition-all duration-500 relative group ${activeTab === item.id ? "text-black bg-[var(--primary-color)] scale-110 shadow-[0_0_40px_rgba(var(--primary-rgb),0.4)]" : "text-white/60 hover:text-white"}`}
                     >
                         <i className={`fa-solid ${item.icon} text-xl md:text-2xl mb-1 group-hover:scale-105 transition-transform`}></i>
                         <span className="text-[7px] md:text-[8px] font-black uppercase tracking-[0.2em]">{item.label}</span>

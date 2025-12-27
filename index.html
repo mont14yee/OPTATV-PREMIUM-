@@ -11,30 +11,29 @@
       :root {
         --primary-color: #39ff14;
         --primary-rgb: 57, 255, 20;
+        --app-solid-bg: #C6D1D5;
       }
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #000;
+        background-color: var(--app-solid-bg);
         color: white;
         overflow-x: hidden;
       }
-      /* Aesthetic Background Engine */
+      /* Aesthetic Background Engine - Updated to Solid Color */
       .app-bg {
         position: fixed;
         inset: 0;
         z-index: -2;
-        background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=2029'); /* Fallback / Sample similar aesthetic */
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+        background-color: var(--app-solid-bg);
+        background-image: none;
       }
-      /* The Dark Glass Overlay to ensure text visibility */
+      /* Contrast Overlay - Refined for solid color theme */
       .app-overlay {
         position: fixed;
         inset: 0;
         z-index: -1;
-        background: radial-gradient(circle at center, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.85) 100%);
-        backdrop-filter: blur(2px);
+        background: radial-gradient(circle at center, rgba(198, 209, 213, 0.1) 0%, rgba(15, 23, 42, 0.3) 100%);
+        backdrop-filter: blur(1px);
       }
       .font-display {
         font-family: 'Oswald', sans-serif;
@@ -56,27 +55,6 @@
       .neon-border {
         animation: neon-glow 2s infinite;
       }
-      /* Custom Range Slider */
-      input[type=range] {
-        -webkit-appearance: none;
-        background: transparent;
-      }
-      input[type=range]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        height: 16px;
-        width: 16px;
-        border-radius: 50%;
-        background: var(--primary-color);
-        cursor: pointer;
-        margin-top: -6px;
-      }
-      input[type=range]::-webkit-slider-runnable-track {
-        width: 100%;
-        height: 4px;
-        cursor: pointer;
-        background: #333;
-        border-radius: 2px;
-      }
       /* Live Badge Animation */
       @keyframes live-pulse-glow {
         0%, 100% { transform: scale(1); box-shadow: 0 0 5px rgba(var(--primary-rgb), 0.5); }
@@ -84,22 +62,6 @@
       }
       .animate-live-badge {
         animation: live-pulse-glow 2s infinite ease-in-out;
-      }
-      /* Floating Background Icons */
-      @keyframes float {
-        0%, 100% { transform: translateY(0) rotate(0deg); }
-        50% { transform: translateY(-20px) rotate(5deg); }
-      }
-      .animate-float {
-        animation: float 8s ease-in-out infinite;
-      }
-      /* Marquee Animation */
-      @keyframes marquee {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
-      }
-      .animate-marquee {
-        animation: marquee 20s linear infinite;
       }
       /* Transitions */
       @keyframes slide-up {
