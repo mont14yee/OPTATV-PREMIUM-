@@ -18,33 +18,6 @@ interface LeagueConfig {
 // --- Data Constants ---
 const COMPETITIONS: readonly LeagueConfig[] = [
     {
-        id: "worldcup",
-        name: "FIFA World Cup 2026",
-        shortName: "WC 2026",
-        icon: "fa-earth-americas",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/aa/FIFA_World_Cup_2026_logo.svg",
-        color: "from-blue-950 via-slate-900 to-black",
-        link: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026"
-    },
-    {
-        id: "afcon",
-        name: "Africa Cup of Nations 2025",
-        shortName: "AFCON 25",
-        icon: "fa-earth-africa",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/f/f6/2025_Africa_Cup_of_Nations_logo.png",
-        color: "from-orange-600 via-green-800 to-red-900",
-        link: "https://www.cafonline.com/caf-africa-cup-of-nations/"
-    },
-    {
-        id: "ucl",
-        name: "UEFA Champions League",
-        shortName: "UCL",
-        icon: "fa-trophy",
-        logoUrl: "https://upload.wikimedia.org/wikipedia/en/b/bf/UEFA_Champions_League_logo_2.svg",
-        color: "from-blue-900 to-indigo-950",
-        link: "https://www.uefa.com/uefachampionsleague/"
-    },
-    {
         id: "epl",
         name: "Premier League",
         shortName: "EPL",
@@ -79,6 +52,33 @@ const COMPETITIONS: readonly LeagueConfig[] = [
         logoUrl: "https://upload.wikimedia.org/wikipedia/en/d/df/Bundesliga_logo_%282017%29.svg",
         color: "from-red-900 to-red-950",
         link: "https://www.bundesliga.com/en/bundesliga/table"
+    },
+    {
+        id: "worldcup",
+        name: "FIFA World Cup 2026",
+        shortName: "WC 2026",
+        icon: "fa-earth-americas",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/a/aa/FIFA_World_Cup_2026_logo.svg",
+        color: "from-blue-950 via-slate-900 to-black",
+        link: "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026"
+    },
+    {
+        id: "afcon",
+        name: "Africa Cup of Nations 2025",
+        shortName: "AFCON 25",
+        icon: "fa-earth-africa",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/en/f/f6/2025_Africa_Cup_of_Nations_logo.png",
+        color: "from-orange-600 via-green-800 to-red-900",
+        link: "https://www.cafonline.com/caf-africa-cup-of-nations/"
+    },
+    {
+        id: "ucl",
+        name: "UEFA Champions League",
+        shortName: "UCL",
+        icon: "fa-trophy",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/en/b/bf/UEFA_Champions_League_logo_2.svg",
+        color: "from-blue-900 to-indigo-950",
+        link: "https://www.uefa.com/uefachampionsleague/"
     },
     {
         id: "mls",
